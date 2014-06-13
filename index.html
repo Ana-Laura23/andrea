@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zapateria Andrea</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var nom,ancho,h,convertir;
+function converN(){
+	nom=document.getElementById("txtnom").value;
+	convierte=nom.toUpperCase();
+	document.getElementById("txtnom").value=convierte;
+	nom=document.getElementById("txtnom").value;
+	ancho=nom.length;
+	for(h=0;h<=ancho-1;h++){
+	if((nom.charAt(h)>='A')&&(nom.charAt(h)<='Z')||(nom.charAt(h)==" "))
+	{
+	}
+	else
+	{
+		alert("Introduciste datos númericos");
+		
+		break;
+	}
+	}
+	}
+
+var cadena,ancho1,x,y,z,a,b;
+function correo(){
+cadena=document.getElementById("txtcorreo").value;
+ancho1=cadena.length;
+
+	if(((cadena.charAt(0)>='0')&&(cadena.charAt(0)<='9'))||(cadena.charAt(0)=='@'))
+	{
+			alert("Primer caracter inválido");
+	}
+	else
+	{
+		y=cadena.indexOf('@');
+		z=cadena.lastIndexOf('@');
+		if(y!=z){
+			alert("Solo introduce un @");
+			
+		}
+		else{
+			if((y==-1)&&(z==-1))
+			{
+			alert("Introduce un @");	
+			
+				}
+				else{
+					a=cadena.indexOf('.');
+					b=cadena.lastIndexOf('.');
+	          if(a!=b)
+			  {
+				  
+			  }
+			  else{
+				  if((a==-1)&&(b==-1)){
+					  alert("Introduce un punto");
+					 
+					  }
+			  }
+					}
+			}
+	
+	}		
+ }
+
+	
+
+
+
+var oli,tel,t;
+function telefono(){
+	tel=document.getElementById("txttel").value;
+	oli=tel.length;
+	for(t=0;t<=oli-1;t++){
+	if((tel.charAt(t)>=0)&&(tel.charAt(t)<=9)||(tel.charAt(t)==" ")||(tel.charAt(t)=='-'))
+	{
+	}
+	else
+	{
+		alert("Introduciste un valor no numerico");
+		
+		break;
+	}
+	}
+}
+	
+	
+function asunto(){
+var	asunto=document.getElementById("txtasun").value;
+var	 convertir=asunto.toUpperCase();
+    document.getElementById("txtasun").value=convertir;
+	}
+	
+	
+function boton(){
+var	seg1=document.getElementById("txtseg1").value;
+var	seg2=document.getElementById("txtseg2").value;
+var	correo=document.getElementById("txtcorreo").value;
+var	asunto=document.getElementById("txtasun").value;
+var	nom=document.getElementById("txtnom").value;
+var	tel=document.getElementById("txttel").value;	
+var s1=seg1.length;
+var s2=seg2.length;
+var c=correo.length;
+var s=asunto.length;
+var m=nom.length;
+var o=tel.length;
+if((s1==0)||(s2==0)||(c==0)||(s==0)||(m==0)||(o==0)){
+	alert("Introducir todos los datos");
+}
+else{
+	if (seg1!=seg2){
+alert("Introducir bien el codigo de seguridad");
+	}
+	else{
+		alert("Mensaje enviado");
+document.getElementById("txtnom").value="";
+document.getElementById("txtcorreo").value="";
+document.getElementById("txttel").value="";
+document.getElementById("txtasun").value="";
+document.getElementById("txtseg2").value="";
+		}
+	}
+	}	
+</script>
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1> Calzado"Andrea"</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Inicio</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+		</ul>		
+        <br>
+        
+     <center> <img src="img/uno.jpg" width="22%" height="15%"></center>
+
+	</div>
+	<div data-role="footer">
+		<h4>Autor: Mejia Sanguino Ana Laura </h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes somos?</h1>
+	</div>
+	<div data-role="content">	
+				<center> Somos una empresa que cuenta con mas de 38 años de experiencia en venta por catálogo. Andrea tiene para ti las últimas tendencias de moda internacional en calzado para toda la familia.</center>
+                 <br>
+                 <center> <img src="img/ola.jpg" width="25%" height="15%"></center>
+               <center> <h1>Misión</h1></center>
+            <center>    Ofrecer a nuestras Estrellas oportunidades
+para realizar sus aspiraciones elevando su
+desarrollo personal y profesional.
+<br>
+Un servicio cordial, ágil, informativo y
+capacitación al afiliarse a nuestro sistema.</center>
+<br>
+ <center> <img src="img/foto.jpg" width="35%" height="20%"></center>
+<center></center>
+<center><h1>Visión</h1></center>
+<center>Ser una empresa líder de venta por
+catálogo que contribuya al desarrollo de
+nuestros clientes, colaboradores,
+proveedores, autoridades y accionistas,
+para nuestro bienestar económico y
+desarrollo social.</center>
+<center>
+     <center><img src="img/ca2.jpg" width="15%" height="25%"></</center>
+     
+<br>
+<center><h1>Valores</h1></center><center>
+Honestidad<br>
+Respeto Lealtad<br>
+Vocación de servicio<br>
+Trabajo en equipo<br>
+Productividad<br>
+Calidad<br>
+Liderazgo e innovación<br></center>
+         <center><img src="img/image.jpg" width="25%" height="10%"></</center>
+	</div>
+	<div data-role="footer">
+		<h4>Calzado "Andrea"</h4>
+        
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Productos</h1>
+	</div>
+	<div data-role="content">	
+				Andrea la empresa de venta por catálogo es tu mejor opción para inciar tu propio negocio.
+                <br>Es una empresa 100% mexicana con más de 38 años de experiencia en el mercado. <br><center><img src="img/sucu.jpg" width="25%" height="5%"></center>
+                <br>
+                Te ofrecemos varias líneas de producto: Calzado y ropa de dama (Andrea), calzado y ropa de caballero (Ferrato), calzado de niña y niño, calzado para bebés, lencería y pijamas, accesorios, cosméticos y más. <br>También cuenta con productos de marcas como Niké, Converse, Adidas, Dr Scholls, entre otros.
+<br>
+<b>A quienes se afilian a nuestro sistema de ventas les llamamos Estrellas, por ser personas que brillan con luz propia al esforzarse por iniciar su propio negocio.</b><center><img src="img/fiestuki.jpg" width="20%" height="15%"></center>                
+	</div>
+	<div data-role="footer">
+		<h4>Calzado "Andrea"</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo de trabajo </h1>
+	</div>
+	<div data-role="content">	
+		<center>Nuestro equipo de trabajo se compone de 6 integrantes.Los cuales se encargan de brindarte el mejor servicio para tu comodidad.</center>
+        <center><img src="img/hermanos.jpg" width="25%" height="15%"></center>
+      <center>  <h1>NUESTROS INTEGRANTES SON:</h1></center>
+   <center>    	<b>	Miriam Lorena Estrada Ballinas. </b><br> 
+    Edad: 17 años. <br>
+    Estudios. <br>
+    Primaria: Escuela "Carmén Serdán". <br>
+    Secundaria: Escuela "Plan de Ayala". <br>
+    Bachiller: Centro de Bachillerato Técnologico Industrial y de Servicios No.184. "Agustín Cortéz Huilizac".
+    
+    </center>
+   <center> <img src="img/lorenza.jpg" width="20%" height="25%"> </center>
+   <br>
+    <center>    		<b>Nestor Alexis Sanchéz Torres.</b> <br> 
+    Edad: 16 años. <br>
+    Estudios. <br>
+    Primaria: Escuela "Felipe Franco Pacheco". <br>
+    Secundaria: Escuela "Técnica No.6". <br>
+    Bachiller: Centro de Bachillerato Técnologico Industrial y de Servicios No.184. "Agustín Cortéz Huilizac".
+    
+    </center>
+   <center> <img src="img/nestor.jpg" width="25%" height="15%"> </center>
+        <br>
+        <center>    		<b>Iris Ruíz Ramírez</b>. <br> 
+    Edad: 17 años. <br>
+    Estudios. <br>
+    Primaria: Escuela "Lázaro Cardenas". <br>
+    Secundaria: Escuela "Aquiles Serdán". <br>
+    Bachiller: Centro de Bachillerato Técnologico Industrial y de Servicios No.184. "Agustín Cortéz Huilizac".
+    
+    </center>
+   <center> <img src="img/iris.jpg" width="20%" height="30%"> </center>
+   <br>
+   <center>    		<b> Uriel Baizan Vidals</b>. <br> 
+    Edad: 17 años. <br>
+    Estudios. <br>
+    Primaria: Escuela "Mariano Matamoros". <br>
+    Secundaria: Escuela "Rodolfo Sanchéz Taboada". <br>
+    Bachiller: Centro de Bachillerato Técnologico Industrial y de Servicios No.184. "Agustín Cortéz Huilizac".
+    </center>
+   <center> <img src="img/baizan.jpg" width="20%" height="20%"> </center>
+   <br>
+        <center>    		<b>Ana Laura Mejia Sanguino.</b> <br> 
+    Edad: 17 años. <br>
+    Estudios. <br>
+    Primaria: Escuela "Mariano Matamoros". <br>
+    Secundaria: Escuela "Rodolfo Sanchéz Taboada". <br>
+    Bachiller: Centro de Bachillerato Técnologico Industrial y de Servicios No.184. "Agustín Cortéz Huilizac".
+    
+    </center>
+   <center> <img src="img/ana.jpg" width="20%" height="25%"> </center>
+        
+	</div>
+	<div data-role="footer">
+		<h4>Calzado "Andrea"</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page5">
+     <div data-role="header">
+          <h1>Contacto</h1>
+          </div>
+      <div data-role="content">
+      <table width="0" border="0">
+  <tr>
+    <td> <label for="textinput"> Nombre:</label></td>
+    <td><input type="text" name="txtnom" id="txtnom" value="" onBlur="converN()" /></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Email:</label></td>
+    <td><input type="text" name="txtcorreo" id="txtcorreo" value="" onBlur="correo()" /></td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Telefono:</label></td>
+    <td><input type="text" name="txttel" id="txttel" value=""  onBlur="telefono()"/></td>
+  </tr>
+  <tr>
+    <td><label for="textarea">Asunto:</label> </td>
+    <td> <textarea cols="40" rows="8" name="txtasun" id="txtasun" onBlur="asunto()"></textarea>
+      </td>
+  </tr>
+  <tr>
+    <td> <label for="textinput">Seguridad:</label></td>
+    <td>
+    <input type="text" name="txtseg1" id="txtseg1" value="231096" disabled="disabled"/>
+    <input type="text" name="txtseg2" id="txtseg2" value=""  /></td>
+  </tr>
+   <tr>
+    <td colspan="2"><button onClick="boton()">Enviar</button></td>
+    
+  </tr>
+</table>
+     
+        
+       
+     
+       
+        
+     
+      </div>
+      <div data-role="footer">
+      <h4> Calzado "Andrea"</h4>
+      </div>
+      </div>    
+
+</body>
+</html>
